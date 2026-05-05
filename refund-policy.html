@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refund Policy — PinkX Studio</title>
+  <meta name="description" content="PinkX Studio's Refund & Cancellation Policy. Clear, fair, and transparent terms for all our creative services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <!-- Anti-FOUC: apply saved theme before paint -->
+  <script>(function(){try{var t=localStorage.getItem('pinkx-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dr6fkyxhq/image/upload/v1777734321/PinkX_Studio%20Favicon.png" />
+  <style>
+    :root {
+      --pink: #ff2e93;
+      --pink-dark: #cc0066;
+      --pink-glow: rgba(255,46,147,0.12);
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --surface2: #1e1e1e;
+      --white: #ffffff;
+      --gray: #888888;
+      --gray-light: #cccccc;
+      --border: rgba(255,255,255,0.07);
+      --border-pink: rgba(255,46,147,0.25);
+      --font: 'Ubuntu', sans-serif;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--pink); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: #ff8ac2; }
+    img, svg { display: block; max-width: 100%; }
+    ul { list-style: none; }
+    ::selection { background: var(--pink); color: var(--white); }
+
+    /* Nav */
+    .pp-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .pp-logo { font-size: 1.25rem; font-weight: 700; text-decoration: none; color: var(--white); }
+    .pp-logo .p { color: var(--pink); }
+    .pp-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.88rem; font-weight: 500; color: var(--gray-light);
+      text-decoration: none;
+      background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+      padding: 8px 18px; border-radius: 100px;
+      transition: all var(--transition);
+    }
+    .pp-back:hover { color: var(--white); border-color: rgba(255,255,255,0.2); text-decoration: none; }
+    .pp-back svg { width: 14px; height: 14px; }
+
+    /* Hero */
+    .pp-hero { padding: 80px 24px 60px; max-width: 820px; margin: 0 auto; border-bottom: 1px solid var(--border); }
+    .pp-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--pink); border: 1px solid var(--border-pink); background: var(--pink-glow);
+      padding: 6px 16px; border-radius: 100px; margin-bottom: 24px;
+    }
+    .pp-badge svg { width: 12px; height: 12px; }
+    .pp-title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; color: var(--white); margin-bottom: 20px; }
+    .pp-title em { font-style: normal; background: linear-gradient(135deg, var(--pink) 0%, #ff8ac2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .pp-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+    .pp-meta-item { font-size: 0.82rem; color: var(--gray); display: flex; align-items: center; gap: 6px; }
+    .pp-meta-item svg { width: 14px; height: 14px; color: var(--pink); }
+
+    /* Layout */
+    .pp-layout { display: grid; grid-template-columns: 240px 1fr; max-width: 1060px; margin: 0 auto; padding: 60px 24px 100px; gap: 60px; align-items: start; }
+
+    /* TOC */
+    .pp-toc { position: sticky; top: 84px; }
+    .pp-toc h3 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); margin-bottom: 16px; }
+    .pp-toc-list { display: flex; flex-direction: column; gap: 2px; }
+    .pp-toc-list a { display: flex; align-items: center; gap: 10px; font-size: 0.83rem; color: var(--gray); text-decoration: none; padding: 7px 12px; border-radius: 8px; transition: all 0.2s ease; }
+    .pp-toc-list a:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+    .pp-toc-list a.active { color: var(--pink); background: var(--pink-glow); }
+    .pp-toc-list a span { display: inline-block; width: 20px; font-size: 0.7rem; color: var(--pink); font-weight: 700; }
+    .pp-trust-badge { margin-top: 32px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 16px; text-align: center; }
+    .pp-trust-badge .shield-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: var(--pink-glow); border: 1px solid var(--border-pink); border-radius: 10px; color: var(--pink); margin: 0 auto 12px; }
+    .pp-trust-badge .shield-icon svg { width: 20px; height: 20px; }
+    .pp-trust-badge p { font-size: 0.78rem; color: var(--gray); line-height: 1.6; }
+    .pp-trust-badge strong { color: var(--pink); }
+
+    /* Sections */
+    .pp-content { min-width: 0; }
+    .pp-section { padding: 40px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 90px; }
+    .pp-section:last-child { border-bottom: none; }
+    .pp-section__tag { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .pp-section__num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--pink-glow); border: 1px solid var(--border-pink); border-radius: 6px; font-size: 0.72rem; font-weight: 700; color: var(--pink); flex-shrink: 0; }
+    .pp-section h2 { font-size: 1.2rem; font-weight: 700; color: var(--white); line-height: 1.3; }
+    .pp-section p { font-size: 0.92rem; color: var(--gray-light); line-height: 1.85; margin-bottom: 14px; }
+    .pp-section p:last-child { margin-bottom: 0; }
+    .pp-section ul { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+    .pp-section ul li { font-size: 0.9rem; color: var(--gray-light); line-height: 1.7; display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); transition: border-color var(--transition); }
+    .pp-section ul li:hover { border-color: var(--border-pink); }
+    .li-icon { width: 32px; height: 32px; min-width: 32px; display: flex; align-items: center; justify-content: center; background: var(--pink-glow); border-radius: 8px; color: var(--pink); }
+    .li-icon svg { width: 15px; height: 15px; }
+    .pp-highlight { background: linear-gradient(135deg, rgba(255,46,147,0.07), rgba(204,0,102,0.04)); border: 1px solid var(--border-pink); border-radius: var(--radius-lg); padding: 24px 28px; margin-top: 20px; }
+    .pp-highlight p { font-size: 0.9rem; color: var(--gray-light); line-height: 1.8; margin-bottom: 0; }
+    .pp-highlight strong { color: var(--pink); }
+
+    /* Contact grid */
+    .pp-contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+    .pp-contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 20px; text-align: center; transition: border-color var(--transition); }
+    .pp-contact-card:hover { border-color: var(--border-pink); }
+    .pp-contact-card .icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: var(--pink-glow); border: 1px solid var(--border-pink); border-radius: 10px; color: var(--pink); margin: 0 auto 12px; }
+    .pp-contact-card .icon svg { width: 20px; height: 20px; }
+    .pp-contact-card p { font-size: 0.78rem; color: var(--gray); margin-bottom: 6px; }
+    .pp-contact-card a { font-size: 0.88rem; font-weight: 600; color: var(--pink); }
+
+    /* Footer */
+    .pp-footer { padding: 32px 24px; border-top: 1px solid var(--border); text-align: center; }
+    .pp-footer p { font-size: 0.82rem; color: var(--gray); }
+    .pp-footer a { color: var(--pink); }
+
+
+    /* ── Light Mode ──────────────────────────────────────────── */
+    [data-theme="light"] {
+      --pink: #d4186b;
+      --pink-dark: #a81255;
+      --pink-glow: rgba(212,24,107,0.09);
+      --bg: #f6f4f1;
+      --surface: #ffffff;
+      --surface2: #ede9e4;
+      --white: #111111;
+      --gray: #6a6a6a;
+      --gray-light: #2e2e2e;
+      --border: rgba(0,0,0,0.09);
+      --border-pink: rgba(212,24,107,0.22);
+    }
+    [data-theme="light"] .pp-nav {
+      background: rgba(246,244,241,0.95);
+    }
+    [data-theme="light"] .pp-section ul li,
+    [data-theme="light"] .pp-trust-badge,
+    [data-theme="light"] .pp-contact-card {
+      background: var(--surface);
+    }
+    [data-theme="light"] .pp-footer {
+      background: var(--surface);
+    }
+
+    /* ── Theme Toggle Button ─────────────────────────────────── */
+    .theme-toggle {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      color: var(--gray-light);
+      display: inline-flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: background var(--transition), border-color var(--transition),
+                  color var(--transition), transform 0.2s;
+      flex-shrink: 0; position: relative; overflow: hidden;
+    }
+    .theme-toggle:hover {
+      background: var(--pink-glow);
+      border-color: var(--border-pink);
+      color: var(--pink);
+      transform: scale(1.08);
+    }
+    .theme-toggle svg {
+      width: 15px; height: 15px;
+      position: absolute;
+      transition: opacity 0.25s, transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .theme-toggle .icon-moon  { opacity: 1;  transform: rotate(0deg) scale(1); }
+    .theme-toggle .icon-sun   { opacity: 0;  transform: rotate(-90deg) scale(0.5); }
+    [data-theme="light"] .theme-toggle .icon-moon { opacity: 0;  transform: rotate(90deg) scale(0.5); }
+    [data-theme="light"] .theme-toggle .icon-sun  { opacity: 1;  transform: rotate(0deg) scale(1); }
+    [data-theme="light"] .theme-toggle { background: rgba(0,0,0,0.05); }
+
+    @media (max-width: 768px) {
+      .pp-layout { grid-template-columns: 1fr; padding: 40px 24px 80px; }
+      .pp-toc { display: none; }
+      .pp-contact-grid { grid-template-columns: 1fr; }
+      .pp-hero { padding: 48px 24px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="pp-nav">
+    <a href="index.html" class="pp-logo">
+      <img src="https://res.cloudinary.com/dr6fkyxhq/image/upload/v1777740105/PinkX_Studio.png" alt="PinkX Studio Logo" style="height:36px;display:block;object-fit:contain;" />
+    </a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" title="Switch to light mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a href="index.html" class="pp-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Back to Home
+    </a>
+  </nav>
+
+  <header class="pp-hero">
+    <div class="pp-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Refund &amp; Cancellation Policy
+    </div>
+    <h1 class="pp-title">Our <em>Refund Policy</em></h1>
+    <div class="pp-meta">
+      <div class="pp-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Last Updated: 1 May 2026
+      </div>
+      <div class="pp-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Effective Immediately
+      </div>
+    </div>
+  </header>
+
+  <div class="pp-layout">
+
+    <aside class="pp-toc">
+      <h3>Contents</h3>
+      <nav class="pp-toc-list">
+        <a href="#s1"><span>01</span> Overview</a>
+        <a href="#s2"><span>02</span> Deposit Policy</a>
+        <a href="#s3"><span>03</span> Eligibility</a>
+        <a href="#s4"><span>04</span> Non-Refundable Services</a>
+        <a href="#s5"><span>05</span> Cancellation</a>
+        <a href="#s6"><span>06</span> Revision Policy</a>
+        <a href="#s7"><span>07</span> Disputes</a>
+        <a href="#s8"><span>08</span> Contact Us</a>
+      </nav>
+      <div class="pp-trust-badge">
+        <div class="shield-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <p><strong>Fair &amp; Transparent</strong><br>Our refund terms are designed to be clear and fair for both clients and our team.</p>
+      </div>
+    </aside>
+
+    <main class="pp-content">
+
+      <section class="pp-section" id="s1">
+        <div class="pp-section__tag"><div class="pp-section__num">01</div><h2>Overview</h2></div>
+        <p>At PinkX Studio, we are committed to delivering exceptional creative work. We understand that sometimes plans change, and we aim to handle all refund and cancellation requests with fairness, transparency, and professionalism.</p>
+        <p>This policy applies to all services offered by PinkX Studio, including but not limited to logo design, brand identity, UI/UX design, website design, motion graphics, video editing, packaging design, presentation design, social media design, and marketing creatives.</p>
+        <div class="pp-highlight">
+          <p><strong>Our commitment:</strong> We will always try to resolve any dissatisfaction through revisions and open communication before any refund request is considered. Client satisfaction is our primary goal.</p>
+        </div>
+      </section>
+
+      <section class="pp-section" id="s2">
+        <div class="pp-section__tag"><div class="pp-section__num">02</div><h2>Deposit Policy</h2></div>
+        <p>All projects require a <strong>50% upfront deposit</strong> before work commences. This deposit covers the initial discovery, research, strategy, and design phase of your project.</p>
+        <ul>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
+            <div><strong>Deposit (50%):</strong> Paid upfront to secure your project slot and commence work. This portion is non-refundable once design work has started, as it covers the time and resources invested in your project.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
+            <div><strong>Final payment (50%):</strong> Due upon project completion and delivery of all agreed deliverables, before final files are released to the client.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
+            <div><strong>Retainer plans:</strong> Monthly retainer fees are billed at the start of each month and are non-refundable once the month has commenced and work has begun.</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="pp-section" id="s3">
+        <div class="pp-section__tag"><div class="pp-section__num">03</div><h2>Refund Eligibility</h2></div>
+        <p>A full or partial refund may be considered in the following circumstances:</p>
+        <ul>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div><strong>Project not started:</strong> If you cancel before any work has commenced (within 24 hours of payment and before the discovery call or brief), a <strong>full refund</strong> of the deposit will be issued, minus any transaction fees.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div><strong>PinkX Studio fails to deliver:</strong> If we are unable to deliver the agreed scope of work within a reasonable timeframe (defined as more than 2× the agreed deadline with no mutual extension agreed), a partial refund proportional to undelivered work will be issued.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div><strong>Work deviates significantly from the agreed brief:</strong> If initial deliverables substantially fail to address the agreed creative brief, and cannot be resolved through the revision process, we will work with you to find a fair resolution, which may include partial credit or refund at our discretion.</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="pp-section" id="s4">
+        <div class="pp-section__tag"><div class="pp-section__num">04</div><h2>Non-Refundable Services</h2></div>
+        <p>The following are <strong>non-refundable</strong> under all circumstances:</p>
+        <ul>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
+            <div><strong>Completed and approved work:</strong> Once a deliverable has been approved (verbally or in writing) by the client, no refund is available for that deliverable.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
+            <div><strong>Change of mind:</strong> Refunds will not be issued due to a change of mind, change of direction, or change of business strategy after work has commenced.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
+            <div><strong>Rush/express service fees:</strong> Any surcharge paid for expedited delivery is non-refundable once work has been prioritised and commenced.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
+            <div><strong>Work delayed by client:</strong> If a project is delayed due to slow feedback, lack of content/assets, or unresponsiveness from the client side for more than 14 days, the deposit is forfeited and the project slot is released.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
+            <div><strong>Stock assets, fonts, or third-party licenses:</strong> Any costs incurred for stock images, licensed fonts, or third-party tools purchased specifically for your project are non-refundable.</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="pp-section" id="s5">
+        <div class="pp-section__tag"><div class="pp-section__num">05</div><h2>Cancellation Policy</h2></div>
+        <p>You may cancel your project at any time by notifying us in writing via email at <a href="mailto:hello@pinkx.studio">hello@pinkx.studio</a>.</p>
+        <ul>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg></span>
+            <div><strong>Cancellation before first deliverable:</strong> 75% refund of deposit, retaining 25% as an administrative and time commitment fee.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg></span>
+            <div><strong>Cancellation after first deliverable presented:</strong> No refund of deposit. We retain the full deposit to cover the design work and resources invested.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg></span>
+            <div><strong>Cancellation mid-project (past 50% completion):</strong> Final payment (or a portion of it) may still be owed for work completed to date, at a rate agreed between both parties.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg></span>
+            <div><strong>Monthly retainer cancellation:</strong> Monthly retainers can be cancelled with 30 days written notice. Work during the final 30-day period will be completed and billed normally.</div>
+          </li>
+        </ul>
+        <div class="pp-highlight">
+          <p>Upon cancellation, all files and work-in-progress created up to the cancellation date remain the property of PinkX Studio until all outstanding invoices are settled. Ownership transfers to the client upon full payment.</p>
+        </div>
+      </section>
+
+      <section class="pp-section" id="s6">
+        <div class="pp-section__tag"><div class="pp-section__num">06</div><h2>Revision Policy</h2></div>
+        <p>Before requesting a refund, we strongly encourage clients to utilise our revision process. Most creative disagreements can be resolved through constructive feedback and revision rounds.</p>
+        <ul>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></span>
+            <div><strong>Starter plan:</strong> 3 included revision rounds per deliverable.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></span>
+            <div><strong>Growth &amp; Premium plans:</strong> Unlimited revisions until satisfaction is achieved.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></span>
+            <div><strong>Additional revision rounds</strong> beyond the included amount may be purchased at an hourly rate of $30/hr.</div>
+          </li>
+        </ul>
+        <p>Revisions must be based on the original agreed brief. Requests that represent a significant change in direction, scope, or concept will be treated as new work and quoted separately.</p>
+      </section>
+
+      <section class="pp-section" id="s7">
+        <div class="pp-section__tag"><div class="pp-section__num">07</div><h2>Disputes</h2></div>
+        <p>We take all client concerns seriously and aim to resolve any disputes amicably and professionally. If you are unhappy with any aspect of our work or service, please follow these steps:</p>
+        <ul>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>
+            <div><strong>Step 1 — Contact us directly:</strong> Email <a href="mailto:hello@pinkx.studio">hello@pinkx.studio</a> with a detailed description of your concern. We respond within 2 business days.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span>
+            <div><strong>Step 2 — Mediation call:</strong> If the issue cannot be resolved via email, we will schedule a call to discuss and work toward a resolution together.</div>
+          </li>
+          <li>
+            <span class="li-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></span>
+            <div><strong>Step 3 — Formal resolution:</strong> In the unlikely event that a resolution cannot be reached, disputes are governed by the laws of Bangladesh. PinkX Studio reserves the right to determine the final outcome within the bounds of this policy.</div>
+          </li>
+        </ul>
+        <p>If a refund is approved, it will be processed within <strong>7–14 business days</strong> to the original payment method used. We are not responsible for delays caused by payment processors or banks.</p>
+      </section>
+
+      <section class="pp-section" id="s8">
+        <div class="pp-section__tag"><div class="pp-section__num">08</div><h2>Contact Us</h2></div>
+        <p>For any refund or cancellation queries, our team is available through the following channels. We aim to respond to all refund enquiries within 2 business days.</p>
+        <div class="pp-contact-grid">
+          <div class="pp-contact-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+            <p>Email us at</p>
+            <a href="mailto:hello@pinkx.studio">hello@pinkx.studio</a>
+          </div>
+          <div class="pp-contact-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+            <p>WhatsApp us at</p>
+            <a href="https://wa.me/8801800000000" target="_blank" rel="noopener">+880 1800 000 000</a>
+          </div>
+          <div class="pp-contact-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+            <p>Our address</p>
+            <a href="#">Dhaka, Bangladesh</a>
+          </div>
+        </div>
+        <div class="pp-highlight" style="margin-top: 28px;">
+          <p>This Refund &amp; Cancellation Policy was last updated on 1 May 2026. PinkX Studio reserves the right to update this policy at any time. Continued use of our services constitutes acceptance of the current policy. For the most recent version, please visit this page.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="pp-footer">
+    <p>&copy; 2026 PinkX Studio. All rights reserved. &middot; <a href="index.html">Back to Homepage</a> &middot; <a href="privacy-policy.html">Privacy Policy</a> &middot; <a href="mailto:hello@pinkx.studio">hello@pinkx.studio</a></p>
+  </footer>
+
+
+  <script>
+    (function() {
+      var btn = document.getElementById('themeToggle');
+      if (!btn) return;
+      var root = document.documentElement;
+      function currentTheme() { return root.getAttribute('data-theme') || 'dark'; }
+      function applyTheme(t) {
+        root.setAttribute('data-theme', t);
+        try { localStorage.setItem('pinkx-theme', t); } catch(e) {}
+        btn.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+      btn.addEventListener('click', function() {
+        applyTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+      });
+    })();
+    /* TOC active link tracking */
+    const sections = document.querySelectorAll('.pp-section');
+    const tocLinks = document.querySelectorAll('.pp-toc-list a');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+    sections.forEach(s => obs.observe(s));
+  </script>
+</body>
+</html>
